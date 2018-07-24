@@ -36,7 +36,7 @@ def filesize3(bytesize):
     else:
         return str(bytesize) + ' Bytes'
 
-path = 'E:\\ISO'    #指定路徑
+path = 'C:\\影片\\無聊詹'    #指定路徑
 get_size(path)
 
 # print('目錄中的文件總大小：%d Byte' % sum(list1))
