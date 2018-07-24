@@ -14,7 +14,7 @@ def get_size(path):
         elif os.path.isfile(pathTmp):  # 判斷是否為檔案
             filesize = filesize3(os.path.getsize(pathTmp))  # 如果是檔案，則獲取相應檔案的大小
             # filesize2 = filesize3(filesize)
-            print('檔案名稱：%s' % filename ,'檔案大小：%s ' % filesize )
+            print('檔案名稱：%s' % filename ,'檔案大小：%s ' % filesize )  #%s是接字串  %d是接數值
             list1.append(filesize)      # 將檔案的大小添加到列表
     # print(sum(list1))
     # print(fileList)
