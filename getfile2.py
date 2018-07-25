@@ -13,9 +13,12 @@ def get_size(path):
         if os.path.isdir(pathTmp):   # 判斷是否為目錄
             get_size(pathTmp)        # 是目錄就繼續遞迴尋找
         elif os.path.isfile(pathTmp):  # 判斷是否為檔案
+            filesize9 = os.path.getsize(pathTmp)  # 如果是檔案，則獲取相應檔案的大小
             filesize = filesize3(os.path.getsize(pathTmp))  # 如果是檔案，則獲取相應檔案的大小
             # filesize2 = filesize3(filesize)
-            print('檔案名稱：%s' % filename ,'檔案大小：%s ' % filesize )  #%s是接字串  %d是接數值
+            if filesize9 > 1073741824: #檔案大小比對
+                print('該檔案超過1G','檔案名稱：%s' % filename ,'檔案大小：%s ' % filesize)
+            # print('檔案名稱：%s' % filename ,'檔案大小：%s ' % filesize )  # %s是接字串  %d是接數值
             list1.append(filesize)      # 將檔案的大小添加到列表
     # print(sum(list1))
     # print(fileList)
@@ -38,7 +41,7 @@ def filesize3(bytesize):
     else:
         return str(bytesize) + ' Bytes'
 
-path = 'C:\\影片\\無聊詹'    #指定路徑
+path = 'E:\\ISO'    #指定路徑
 get_size(path)
 # print('目錄中的文件總大小：%d Byte' % sum(list1))
 
