@@ -1,8 +1,6 @@
 #coding=utf-8
 import os
 import os.path
-import smtplib
-import email
 import math
 
 
@@ -28,7 +26,6 @@ def get_size(path):
             # list1.append(filesize)      # 將檔案的大小添加到列表
     # print(sum(list1))
     # print(fileList)
-
 # path= input("输入路径：").strip()  #由用戶指定檔案路徑
 
 #位元組轉換
@@ -53,5 +50,4 @@ get_size(path)
 # print('目錄中的文件總大小：%d Byte' % sum(list1))
 for i in b:   #跑回圈輸出list內的資料
     print(i)
-
 
