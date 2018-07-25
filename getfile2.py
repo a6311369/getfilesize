@@ -1,7 +1,10 @@
 #coding=utf-8
 import os
 import os.path
-# import math
+import smtplib
+import email
+import math
+
 
 list1 = []
 b = []
@@ -48,6 +51,7 @@ def filesize3(bytesize):
 path = 'E:\\ISO'    #指定路徑
 get_size(path)
 # print('目錄中的文件總大小：%d Byte' % sum(list1))
-for i in b:
+for i in b:   #跑回圈輸出list內的資料
     print(i)
+
 
