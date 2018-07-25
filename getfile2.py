@@ -19,7 +19,7 @@ def get_size(path):
             if filesize9 > 1073741824: #檔案大小比對，超過1G就抓出來
                 print('該檔案超過1G','檔案名稱：%s' % filename ,'檔案大小：%s ' % filesize)
             # print('檔案名稱：%s' % filename ,'檔案大小：%s ' % filesize )  # %s是接字串  %d是接數值
-            list1.append(filesize)      # 將檔案的大小添加到列表
+            # list1.append(filesize)      # 將檔案的大小添加到列表
     # print(sum(list1))
     # print(fileList)
 # path= input("输入路径：").strip()  #由用戶指定檔案路徑
