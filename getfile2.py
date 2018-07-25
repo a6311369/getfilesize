@@ -4,7 +4,7 @@ import os.path
 # import math
 
 list1 = []
-
+b = []
 def get_size(path):
     fileList = os.listdir(path)  # 獲取path目錄下所有文件
     for filename in fileList:
@@ -17,11 +17,15 @@ def get_size(path):
             filesize = filesize3(os.path.getsize(pathTmp))  # 如果是檔案，則獲取相應檔案的大小
             # filesize2 = filesize3(filesize)
             if filesize9 > 1073741824: #檔案大小比對，超過1G就抓出來
-                print('該檔案超過1G','檔案名稱：%s' % filename ,'檔案大小：%s ' % filesize)
+                a = '該檔案超過1G','檔案名稱：%s' % filename ,'檔案大小：%s ' % filesize
+                b.append(a) #將檔案名稱增加到list內
+                # print (a)
+                # print('該檔案超過1G','檔案名稱：%s' % filename ,'檔案大小：%s ' % filesize)
             # print('檔案名稱：%s' % filename ,'檔案大小：%s ' % filesize )  # %s是接字串  %d是接數值
             # list1.append(filesize)      # 將檔案的大小添加到列表
     # print(sum(list1))
     # print(fileList)
+
 # path= input("输入路径：").strip()  #由用戶指定檔案路徑
 
 #位元組轉換
@@ -44,4 +48,6 @@ def filesize3(bytesize):
 path = 'E:\\ISO'    #指定路徑
 get_size(path)
 # print('目錄中的文件總大小：%d Byte' % sum(list1))
+for i in b:
+    print(i)
 
